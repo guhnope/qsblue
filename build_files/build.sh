@@ -13,7 +13,7 @@ set -ouex pipefail
 ## Install extra DNF Packages
 dnf5 install -y \
  niri xwayland-satellite alacritty greetd greetd-selinux util-linux wlsunset wl-clipboard \
- tuned  whois plymouth xdg-desktop-portal-gnome imv nemo mousepad  
+ qt6-wayland tuned whois plymouth xdg-desktop-portal-gnome imv nemo mousepad  
 
 dnf5 -y copr enable avengemedia/danklinux
 dnf5 -y copr enable avengemedia/dms

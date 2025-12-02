@@ -13,4 +13,4 @@ vt = 1
 # on the greeter. A graphical greeter may for example require the user to be
 # in the `video` group.
 user = "greeter"
-command = "/usr/bin/dms-greeter --command mangowc"
+command = "/usr/bin/dms-greeter --command niri"
