@@ -13,7 +13,7 @@ set -ouex pipefail
 ## Install extra DNF Packages
 dnf5 install -y \
  niri xwayland-satellite alacritty greetd greetd-selinux util-linux wlsunset wl-clipboard \
- qt6-wayland tuned whois plymouth xdg-desktop-portal-gnome imv nemo mousepad  
+ qt6-wayland tuned whois plymouth xdg-desktop-portal-gnome imv mpv nemo mousepad  
 
 dnf5 -y copr enable avengemedia/danklinux
 dnf5 -y copr enable avengemedia/dms
@@ -26,3 +26,12 @@ dnf5 install -y ublue-brew ublue-os-udev-rules ublue-os-just ublue-os-luks ublue
 systemctl enable greetd
 systemctl enable brew-setup.service
 systemctl enable firewalld
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Install from list (ignore comments/empty lines)
+if [[ -f /build/packagelist_files/flatpak.txt ]]; then
+    echo "Installing Flatpaks from flatpak.txt..."
+    flatpak install -y --or-update flathub $$ (grep -v '^#' /build/packagelist_files/flatpak.txt | grep -v '^ $$' | tr '\n' ' ')
+fi
+
