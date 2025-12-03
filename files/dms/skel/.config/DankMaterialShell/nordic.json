@@ -1,0 +1,22 @@
+{
+    "name": "Nordic Polar",
+    "primary": "#88C0D0",
+    "primaryText": "#2E3440",
+    "primaryContainer": "#5E81AC",
+    "secondary": "#81A1C1",
+    "surface": "#3B4252",
+    "surfaceText": "#ECEFF4",
+    "surfaceVariant": "#434C5E",
+    "surfaceVariantText": "#D8DEE9",
+    "surfaceTint": "#88C0D0",
+    "background": "#2E3440",
+    "backgroundText": "#ECEFF4",
+    "outline": "#4C566A",
+    "surfaceContainer": "#434C5E",
+    "surfaceContainerHigh": "#4C566A",
+    "surfaceContainerHighest": "#5E81AC",
+    "error": "#BF616A",
+    "warning": "#EBCB8B",
+    "info": "#5E81AC",
+    "matugen_type": "scheme-expressive"
+}

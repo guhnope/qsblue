@@ -1,0 +1,23 @@
+{
+    "name": "Gruvbox Dark",
+    "primary": "#d8c79c",
+    "primaryText": "#3c3836",
+    "primaryContainer": "#665c54",
+    "secondary": "#a9b665",
+    "surface": "#3c3836",
+    "surfaceText": "#ebdbb2",
+    "surfaceVariant": "#504945",
+    "surfaceVariantText": "#d5c4a1",
+    "surfaceTint": "#d5c4a1",
+    "oldbackground": "#282828",
+    "background": "#3c3836",
+    "backgroundText": "#282828",
+    "outline": "#928374",
+    "surfaceContainer": "#403a35",
+    "surfaceContainerHigh": "#504945",
+    "surfaceContainerHighest": "#665c54",
+    "error": "#FF0066",
+    "warning": "#CCFF00",
+    "info": "#00FFCC",
+    "matugen_type": "scheme-expressive"
+}

@@ -39,7 +39,9 @@ modules:
   - type: files
     files:
       - source: niri
-        destination: /
+        destination: /etc    
+      - source: dms
+        destination: /etc
   - type: systemd
     system:
       enabled:

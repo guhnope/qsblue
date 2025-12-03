@@ -1,0 +1,11 @@
+{
+  "commandRunner": {
+    "enabled": true
+  },
+  "webSearch": {
+    "enabled": true
+  },
+  "niriWindows": {
+    "enabled": true
+  }
+}
