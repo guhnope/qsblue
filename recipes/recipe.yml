@@ -1,6 +1,6 @@
 name: qsblue-niri-dms
 image-version: 43
-base-image: ghcr.io/ublue-os/sway-base
+base-image: ghcr.io/ublue-os/sway-atomic-main:latest
 
 modules:
   - type: dnf
