@@ -42,10 +42,18 @@ modules:
         destination: /etc    
       - source: dms
         destination: /etc
+      - source: users
+        destination: /usr/lib/systemd/user/
   - type: systemd
     system:
       enabled:
         - greetd
         - firewalld
 
+  - type: script
+    script: |
+      #!/bin/bash
+      set -euo pipefail
+      mkdir -p /usr/lib/systemd/user/default.target.wants
+      ln -sf ../dms-skel.service /usr/lib/systemd/user/default.target.wants/
 description: "QuickBlue - Niri + DankMaterialShell + DMS Greeter + Brave dev setup"

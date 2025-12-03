@@ -1,0 +1,17 @@
+
+[Unit]
+Description=Copy DMS skeleton to existing user (one-shot)
+After=graphical-session.target
+# Only run once ever
+ConditionPathExists=!~/.config/dms-applied-marker
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rsync -a --ignore-existing /etc/skel/ %h/
+ExecStartPost=/usr/bin/touch %h/.config/dms-applied-marker
+# Optional: restart your compositor so DMS launcher appears immediately
+ExecStartPost=/usr/bin/hyprctl dispatch exec "[float] true" "$SHELL -c 'sleep 2 && dms-launcher || true'"   # for Hyprland
+# ExecStartPost=/usr/bin/niri msg action do-screen-transition   # for Niri
+
+[Install]
+WantedBy=default.target
