@@ -12,8 +12,8 @@ set -ouex pipefail
 # this installs a package from fedora repos
 ## Install extra DNF Packages
 dnf5 install -y \
- niri xwayland-satellite alacritty greetd greetd-selinux util-linux wlsunset wl-clipboard \
- qt6-wayland tuned whois plymouth xdg-desktop-portal-gnome imv mpv nemo mousepad  
+ niri xwayland-satellite alacritty greetd greetd-selinux wlsunset \
+ qt6-qtwayland tuned xdg-desktop-portal-gnome imv mpv nemo mousepad  
 
 dnf5 -y copr enable avengemedia/danklinux
 dnf5 -y copr enable avengemedia/dms
