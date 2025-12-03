@@ -1,6 +1,6 @@
 name: qsblue-niri-dms
 image-version: 43
-base-image: ghcr.io/wayblueorg/hyprland
+base-image: ghcr.io/ublue-os/base-main
 modules:
   - type: dnf
     repos:
@@ -31,18 +31,6 @@ modules:
       - mpv
       - nemo
       - mousepad
-      - hyprpolkitagent
-    remove:
-      - firefox
-      - firefox-langpacks
-      - sddm
-    replace:  # Force newer Qt (6.10.1 from F43 updates)
-      - from-repo: https://archives.fedoraproject.org/pub/archive/fedora/linux/updates/43/Everything/x86_64/Packages/q/
-        packages:
-          - qt6-qtbase-6.10.1-1.fc43.x86_64
-          - qt6-qtdeclarative-6.10.1-1.fc43.x86_64
-          - qt6-qtwayland-6.10.1-1.fc43.x86_64
-      # Add more Qt subpkgs if needed (e.g., qt6-qtquick3d for full Quickshell)
   - type: files
     files:
       - source: system_files
