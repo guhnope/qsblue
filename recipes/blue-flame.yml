@@ -32,6 +32,7 @@ modules:
       - dms
       - dms-greeter
       - wlsunset
+      - neovim
       - cliphist
       - imv
       - mpv
@@ -42,16 +43,45 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-    exclude:
-      - fuzzel
-      - waybar
-      - fedora-workstation-backgrounds
-      - gnome-keyring
-      - gnome-keyring-pam
-      - gnome-online-accounts
-      - gnome-online-accounts-libs
-      - f43-backgrounds-gnome-      
-      - abattis-cantarell-fonts   # also often sneaks in    
+      - vim-minimal  
+      - vim-enhanced       
+      - vim-default-editor  
+    override:
+      replace:
+        # fuzzel (niri’s example config pulls this as a weak dep)
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/Packages/f/
+          packages:
+            - fuzzel-1.10.2-1.fc43.x86_64
+
+        # waybar (same story)
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/Packages/w/
+          packages:
+            - waybar-0.10.4-1.fc43.x86_64
+
+        # wallpapers & GNOME branding
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/Packages/f/
+          packages:
+            - fedora-workstation-backgrounds-1.7-1.fc43.noarch
+            - f43-backgrounds-base-43.0.0-1.fc43.noarch
+            - f43-backgrounds-gnome-43.0.0-1.fc43.noarch
+
+        # gnome-keyring (pulled by greetd + pam)
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/updates/43/Everything/x86_64/Packages/g/
+          packages:
+            - gnome-keyring-46.2-1.fc43.x86_64
+            - gnome-keyring-pam-46.2-1.fc43.x86_64
+
+        # gnome-online-accounts (weak dep from xdg-desktop-portal-gnome)
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/Packages/g/
+          packages:
+            - gnome-online-accounts-3.52.0-1.fc43.x86_64
+            - gnome-online-accounts-libs-3.52.0-1.fc43.x86_64
+
+        # cantarell fonts (GNOME default fonts)
+        - from-repo: https://download.fedoraproject.org/pub/fedora/linux/releases/43/Everything/x86_64/os/Packages/a/
+          packages:
+            - abattis-cantarell-fonts-0.301-13.fc43.noarch
+            - abattis-cantarell-vf-fonts-0.301-13.fc43.noarch
   - type: files
     files:
       - source: niri
@@ -67,6 +97,7 @@ modules:
     scripts:
       - dms-skel.sh
       - greetd-users.sh
+      - neovim.sh
 
 description: "Niri + DankMaterialShell in an Atomic Desktop"
 
