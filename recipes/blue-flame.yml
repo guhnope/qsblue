@@ -45,7 +45,6 @@ modules:
       - firefox-langpacks
       - gnome-keyring
       - gnome-online-accounts-libs
-      - desktop-backgrounds-gnome 
       - f43-backgrounds-gnome 
   - type: files
     files:
