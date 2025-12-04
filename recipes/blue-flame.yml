@@ -49,8 +49,8 @@ modules:
     files:
       - source: niri
         destination: /
-      - source: users
-        destination: /usr/lib/systemd/user/
+      - source: system
+        destination: / 
   - type: systemd
     system:
       enabled:
