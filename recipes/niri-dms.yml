@@ -37,7 +37,6 @@ modules:
       - firefox
       - firefox-langpacks
       - waybar
-      - fuzzel
   - type: files
     files:
       - source: niri
