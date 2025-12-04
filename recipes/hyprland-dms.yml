@@ -14,8 +14,9 @@ modules:
       - hyprland
       - hyprpicker
       - hyprsysteminfo
-      - hyprland-contib
       - hyprland-plugins
+      - hypridle
+      - hyprcursor
       - hyprshot
       - hyprdim
       - qt6ct-kde
