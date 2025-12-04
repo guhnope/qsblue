@@ -62,6 +62,8 @@ modules:
       - fuzzel
       - waybar
       - f43-backgrounds-gnome
+      - fedora-workstation-backgrounds
+      - desktop-backgrounds-gnome
       - gnome-online-accounts-libs
   - type: script
     scripts:

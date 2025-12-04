@@ -42,19 +42,23 @@ modules:
       - code
     remove:
       - firefox
-      - firefox-langpacks      
+      - firefox-langpacks
+      - vim-minimal  
+      - vim-enhanced           
   - type: files
     files:
       - source: mango
         destination: /
       - source: users
         destination: /usr/lib/systemd/user/        
-  - type: script
-    scripts:
-      - dms-skel.sh
   - type: systemd
     system:
       enabled:
         - greetd
         - firewalld
+  - type: script
+    scripts:
+      - dms-skel.sh
+      - greetd-users.sh
+      - neovim.sh        
 description: "MangoWC + DankMaterialShell in an Atomic Desktop"
