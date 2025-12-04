@@ -57,5 +57,17 @@ modules:
       enabled:
         - greetd
         - firewalld
-
+  - type: defualt-flatpaks
+    configurations:
+      - scope: system
+        repo:
+          title: Flathub (System)
+        install:
+          - io.podman_desktop.PodmanDesktop
+          - com.brave.Browser
+          - com.visualstudio.code
+          - org.signal.Signal
+          - com.slack.Slack
+          - md.obsidian.Obsidian
+          - org.libreoffice.LibreOffice
 description: "Hyprland + DankMaterialShell in an Atomic Desktop"

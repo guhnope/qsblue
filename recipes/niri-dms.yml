@@ -36,6 +36,8 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - waybar
+      - fuzzel
   - type: files
     files:
       - source: niri
@@ -50,4 +52,20 @@ modules:
   - type: script
     scripts:
       - dms-skel.sh
+  - type: defualt-flatpaks
+    configurations:
+      - scope: system
+        repo:
+          title: Flathub (System)
+        install:
+          - io.podman_desktop.PodmanDesktop
+          - com.brave.Browser
+          - com.visualstudio.code
+          - org.signal.Signal
+          - com.slack.Slack
+          - md.obsidian.Obsidian
+
+      
 description: "Niri + DankMaterialShell in an Atomic Desktop"
+
+

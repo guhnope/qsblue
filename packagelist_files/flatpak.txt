@@ -1,5 +1,0 @@
-com.visualstudio.code
-org.signal.Signal
-io.podman_desktop.PodmanDesktop
-com.brave.Browser
-com.spotify.Client
