@@ -2,6 +2,12 @@ name: BlueCandle
 image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
+  - type: os-release
+    id: bluecandle
+    name: "BlueCandle"
+    id-like: 
+      - fedora
+    variant: "Silverblue"
   - type: dnf
     repos:   
       copr:
@@ -80,6 +86,7 @@ modules:
       - dms-skel.sh
       - greetd-users.sh
       - neovim.sh
+      - misc.sh
 
 description: "Niri + DankMaterialShell in an Atomic Desktop"
 

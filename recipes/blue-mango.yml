@@ -71,5 +71,6 @@ modules:
     scripts:
       - dms-skel.sh
       - greetd-users.sh
-      - neovim.sh        
+      - neovim.sh
+      - misc.sh
 description: "MangoWC + DankMaterialShell in an Atomic Desktop"
