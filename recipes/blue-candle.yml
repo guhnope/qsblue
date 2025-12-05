@@ -3,8 +3,7 @@ image-version: 43
 base-image: ghcr.io/ublue-os/base-main
 modules:
   - type: os-release
-    name: "BlueCandle"
-    pretty-name: "BlueCandle Atomic 43"
+    name: "BlueCandle 43"
     variant: "Core"
   - type: dnf
     repos:   
