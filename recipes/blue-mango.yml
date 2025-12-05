@@ -29,7 +29,12 @@ modules:
       - wlsunset
       - cliphist
       - imv
-      - nemo
+      - caja
+      - atril
+      - mousepad
+      - engrampa
+      - paperwork
+      - mpv
     remove:
       - firefox
       - firefox-langpacks
@@ -50,8 +55,6 @@ modules:
           - com.visualstudio.code
           - org.libreoffice.LibreOffice
           - com.spotify.Client
-          - io.mpv.Mpv          
-          - org.xfce.mousepad
   - type: files
     files:
       - source: mango

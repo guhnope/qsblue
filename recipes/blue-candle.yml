@@ -19,8 +19,6 @@ modules:
       - greetd-selinux
       - qt6-qtwayland
       - fish
-      - qt6ct
-      - qt5ct
       - wl-clipboard
       - network-manager-applet
       - quickshell
@@ -33,7 +31,11 @@ modules:
       - neovim
       - cliphist
       - imv
-      - nemo
+      - caja
+      - atril
+      - mousepad
+      - engrampa
+      - paperwork
       - mpv
     remove:
       - firefox
@@ -54,8 +56,7 @@ modules:
           - md.obsidian.Obsidian
           - com.visualstudio.code
           - org.libreoffice.LibreOffice
-          - com.spotify.Client
-          - org.xfce.mousepad          
+          - com.spotify.Client        
   - type: files
     files:
       - source: niri
